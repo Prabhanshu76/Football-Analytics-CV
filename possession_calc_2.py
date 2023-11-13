@@ -1,3 +1,5 @@
+# Count possession when posseion for more than threshold    
+
 class PossessionCalculator:
     def __init__(self, consecutive_threshold=3):
         self.consecutive_threshold = consecutive_threshold
