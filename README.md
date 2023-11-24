@@ -6,3 +6,8 @@ With YOLOv5, we've been able to achieve accurate and swift player and ball detec
 In conjunction with YOLOv5, we've integrated ByteTracker, a sophisticated tracking system. ByteTracker's efficiency ensures smooth and continuous tracking of players and the ball across frames, providing a reliable way to monitor their movements throughout the game.
 
 Our overarching goal is to offer coaches and analysts a tool that provides deep insights into team strategies and player performances. By enabling more comprehensive soccer analytics, we aspire to support smarter decision-making in coaching and to enhance overall performance analysis. Ultimately, we're aiming to contribute to the improvement of soccer analysis methods, offering teams valuable insights to refine their strategies and tactics.
+
+For project setup:
+1) Download and copy this custom ByteTrack folder to the project folder: [Link](https://drive.google.com/file/d/12Yzo3-L2uiR4ivmQkLLFM501_4nXU_ue/view?usp=sharing)
+2) Download this model: [Link](https://drive.google.com/file/d/1_3nIEdVzW3674-lumMaU0OY7nhKTwdSL/view?usp=sharing)
+3) Run setup.py
