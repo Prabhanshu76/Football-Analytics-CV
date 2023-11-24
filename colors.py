@@ -50,7 +50,7 @@ MARKER_HEIGHT = 20
 MARKER_MARGIN = 10
 
 # distance in pixels from the player's bounding box where we consider the ball is in his possession
-PLAYER_IN_POSSESSION_PROXIMITY = 5 #30
+#PLAYER_IN_POSSESSION_PROXIMITY = 5 #30
 
 
 

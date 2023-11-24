@@ -1,13 +1,28 @@
 from flask import Flask, render_template, Response, request
 from common_imports import cv2
 from detection_utility import detections2boxes, match_detections_with_tracks
-from config import *
+from config import parse_config, load_model, load_video_capture, load_boundaries, load_objects, get_player_in_possession_proximity, torch
+from geometry_utilities import  Detection, filter_detections_by_class
 
 
 app = Flask(__name__)
 
+team1_passes = team2_passes = team1_possession_percentage = team2_possession_percentage = 0
+config = parse_config("config.ini")
+model = load_model(config['Paths']['WEIGHTS_PATH'])
+
+
 
 def generate_frames():
+    torch.cuda.empty_cache()
+    config = parse_config("config.ini")
+    cap = load_video_capture(config['Paths']['SOURCE_VIDEO_PATH'])
+    boundaries = load_boundaries(config)
+    objects = load_objects(config, boundaries)
+    PLAYER_IN_POSSESSION_PROXIMITY = get_player_in_possession_proximity(config)
+
+    jersey_classifier, base_annotator, player_goalkeeper_text_annotator, ball_marker_annotator, player_marker_annotator, byte_tracker, possession_calculator, pass_tracker = objects
+
     global team1_passes, team2_passes, team1_possession_percentage, team2_possession_percentage
     possession_team=""
 

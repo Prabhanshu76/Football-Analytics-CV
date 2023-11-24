@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCV Video Stream</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #video-frame {
+            width: 620px;
+            height: 480px;
+        }
+    </style>
+</head>
+<!-- Update the body of your HTML template -->
+<body>
+    <h1>OpenCV Video Stream</h1>
+    <div id="video-frame">
+        <img src="{{ url_for('video_feed') }}" style="width: 100%; height: 100%;" id="video">
+    </div>
+
+    <!-- Add a div to display possession and pass count -->
+    <div id="info">
+        <p>Team 1 Passes: <span id="team1-passes">0</span></p>
+        <p>Team 2 Passes: <span id="team2-passes">0</span></p>
+        <p>Team 1 Possession: <span id="team1-possession">0.00%</span></p>
+        <p>Team 2 Possession: <span id="team2-possession">0.00%</span></p>
+    </div>
+
+    <script>
+        // Update the information using JavaScript
+        function updateInfo() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('team1-passes').innerText = data.team1_passes;
+                    document.getElementById('team2-passes').innerText = data.team2_passes;
+                    document.getElementById('team1-possession').innerText = data.team1_possession_percentage.toFixed(2) + '%';
+                    document.getElementById('team2-possession').innerText = data.team2_possession_percentage.toFixed(2) + '%';
+                });
+        }
+
+        // Update the information every second (adjust as needed)
+        setInterval(updateInfo, 1000);
+    </script>
+</body>
+
+</html>
