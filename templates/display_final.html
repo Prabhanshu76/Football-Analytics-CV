@@ -8,27 +8,85 @@
 
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1 {
+            color: #e44d26; /* Orange color for emphasis */
+            margin-bottom: 20px;
         }
 
         #video-frame {
-            width: 620px;
-            height: 480px;
+            width: 80%;
+            max-width: 800px;
+            border: 2px solid #e44d26; /* Orange color for emphasis */
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
+
+        #video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 1200px; 
+        }
+
+        #info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #info p {
+            margin: 8px 0;
+            font-size: 18px;
+            color: #e44d26; /* Orange color for emphasis */
+        }
+
+        #info span {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        #myBtn {
+            /* display: none; */
+            /* position: fixed; */
+            top: 200px;
+            left: 200px;
+            z-index: 1000;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
     </style>
 </head>
-<!-- Update the body of your HTML template -->
+
 <body>
-    <h1>OpenCV Video Stream</h1>
+    <form action="/" >
+        <input type="submit" value="Home" id="myBtn">
+    </form>
+  
+    <h1>Soccer Match Analysis</h1>
+
     <div id="video-frame">
-        <img src="{{ url_for('video_feed') }}" style="width: 100%; height: 100%;" id="video">
+        <img src="{{ url_for('video_feed') }}" alt="Video Stream" id="video">
     </div>
 
-    <!-- Add a div to display possession and pass count -->
     <div id="info">
         <p>Team 1 Passes: <span id="team1-passes">0</span></p>
         <p>Team 2 Passes: <span id="team2-passes">0</span></p>

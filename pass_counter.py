@@ -14,7 +14,7 @@ class PassTracker:
         self.team2_passes = 0
         self.frames_with_team1_possession = 0  # Counter for frames with Team 1 possession
         self.frames_with_team2_possession = 0  # Counter for frames with Team 2 possession
-        self.min_pass = int(config['MINIMUMPASS']['min_pass'])  # Minimum frames required for a pass
+        self.min_frames = int(config['MINIMUMFRAMES']['min_frames'])  # Minimum frames required for a pass
 
     def update_pass(self, possession_team, player_in_possession_track_id):
         if possession_team != self.last_possession_team:
@@ -28,7 +28,7 @@ class PassTracker:
                 and player_in_possession_track_id != self.last_team1_possession_track_id
                 and self.last_possession_team == 'Team 1'
             ):
-                if self.frames_with_team1_possession > self.min_pass:  # Use the class attribute for the threshold
+                if self.frames_with_team1_possession > self.min_frames:  # Use the class attribute for the threshold
                     self.team1_passes += 1
                 self.last_team1_possession_track_id = player_in_possession_track_id
 
@@ -40,7 +40,7 @@ class PassTracker:
                 and player_in_possession_track_id != self.last_team2_possession_track_id
                 and self.last_possession_team == 'Team 2'
             ):
-                if self.frames_with_team2_possession > self.min_pass:  # Use the class attribute for the threshold
+                if self.frames_with_team2_possession > self.min_frames:  # Use the class attribute for the threshold
                     self.team2_passes += 1
                 self.last_team2_possession_track_id = player_in_possession_track_id
 

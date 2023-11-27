@@ -3,6 +3,7 @@ from common_imports import cv2
 from detection_utility import detections2boxes, match_detections_with_tracks
 from config import parse_config, load_model, load_video_capture, load_boundaries, load_objects, get_player_in_possession_proximity, torch
 from geometry_utilities import  Detection, filter_detections_by_class
+import configparser
 
 
 app = Flask(__name__)
@@ -10,7 +11,7 @@ app = Flask(__name__)
 team1_passes = team2_passes = team1_possession_percentage = team2_possession_percentage = 0
 config = parse_config("config.ini")
 model = load_model(config['Paths']['WEIGHTS_PATH'])
-
+video_file_path = ''
 
 
 def generate_frames():
@@ -127,6 +128,17 @@ def generate_frames():
 
 
 
+def update_config_file(video_file_path):
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+
+    # Update the SOURCE_VIDEO_PATH in the [Paths] section
+    config.set('Paths', 'SOURCE_VIDEO_PATH', video_file_path)
+
+    # Save the changes back to the config file
+    with open('config.ini', 'w') as config_file:
+        config.write(config_file)
+
 @app.route('/upload', methods=['POST'])
 def upload():
     if 'file' not in request.files:
@@ -139,6 +151,9 @@ def upload():
 
     # Save the uploaded file to a folder (you need to create the 'uploads' folder in your project directory)
     file.save('static/uploads/' + file.filename)
+    video_file_path = 'static/uploads/' + file.filename
+    print(video_file_path)
+    update_config_file(video_file_path)
 
     # return 'File uploaded successfully'
     return render_template('displayvideo.html', filename=file.filename) 
@@ -146,6 +161,24 @@ def upload():
 
 @app.route('/')
 def index():
+
+    import os
+
+    folder_path = 'static/uploads/'
+
+    # List all files in the folder
+    files = os.listdir(folder_path)
+
+    # Iterate over the files and delete them
+    for file in files:
+        file_path = os.path.join(folder_path, file)
+        try:
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                print(f"Deleted: {file_path}")
+        except Exception as e:
+            print(f"Error deleting {file_path}: {e}")
+    print("done")
     return render_template('index.html') 
 
 @app.route('/video_feed')

@@ -2,26 +2,15 @@
 <html>
 
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
 
-  <title>Oxer</title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" /> -->
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+<!-- 
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" /> -->
   <!-- Custom styles for this template -->
   <link href="static/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -29,7 +18,24 @@
 </head>
 
 <body>
-  <section class="class_section ">
+  <form action="/">
+    <input type="submit" value="Home" id="myBtn">
+</form>
+  <section id="video-section">
+    <h2>Uploaded Video</h2>
+    <video controls>
+      <source src="{{ url_for('static', filename='uploads/' + filename) }}" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+
+    <form action="/process_video" method="post" >
+      <input type="submit" value="Process Video" id="myBtn">
+  </form>
+
+</section>
+
+  
+  <!-- <section class="class_section ">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto">
@@ -38,31 +44,27 @@
               <div class="col-lg-9 col-md-10">
                 <div class="heading_container">
                   <h2>
-                    Your uploaded Video
+                    Uploaded Video
                   </h2>
-                  <p>
-                    some text
-                  </p>
                 </div>
               </div>
             </div>
             <div class="class_box-container">
-              <video width="640" height="360" controls>
+              <video width="900" height="500" controls>
                 <source src="{{ url_for('static', filename='uploads/' + filename) }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             </div>
             <div>
-                <!-- <a action="/process_video">Process Video</a> -->
                 <form action="/process_video" method="post" >
-                  <input type="submit" value="Process Video">
+                  <input type="submit" value="Process Video" id="myBtn">
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 </body>
 

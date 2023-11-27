@@ -20,8 +20,6 @@
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="static/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -29,13 +27,23 @@
 </head>
 
 <body>
-  <div class="hero_area" id="hero_area">
+  
+
+    <header>
+      <nav>
+          <a onclick="document.getElementById('hero_area').scrollIntoView();" id="myBtn" title="Go to About">Home</a>
+          <a onclick="document.getElementById('about_area').scrollIntoView();" id="myBtn" title="Go to About">About</a>
+          <!-- <a onclick="document.getElementById('team').scrollIntoView();" id="myBtn" title="Go to About">Team</a> -->
+          <a href = "#section3"  id="myBtn">Team</a>
+      </nav>
+  </header>
     <!-- header section strats -->
     
     <!-- end header section -->
     <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <button onclick="document.getElementById('about_area').scrollIntoView();" id="myBtn" title="Go to About">About</button>
+    <div class="hero_area" id="hero_area">
+    <section class="slider_section position-relative">
+      <!-- <a onclick="document.getElementById('about_area').scrollIntoView();" id="myBtn" title="Go to About">About</a> -->
       
       <div class="container-fluid">
        
@@ -56,12 +64,10 @@
                       <div class="btn-box">
 
                         <form action="/upload" method="post" enctype="multipart/form-data">
-                          <input type="file" name="file" accept="video/*">
-                          <input type="submit" value="Upload">
+                          <input type="file" name="file" accept="video/*" id="myBtn">
+                          <input type="submit" value="Upload" id="myBtn">
                       </form>
-                        <a href="" class="btn-1">
-                          Upload Video
-                        </a>
+
                         <!-- <input type="button" href="#about_area" /> -->
                         <!-- <input type="button" onClick="document.getElementById('about_area').scrollIntoView();" /> -->
                         
@@ -85,7 +91,10 @@
 
   <div id="about_area">
 
-  <section class="about_section layout_padding">
+  <section class="about_section">
+    <br>
+    <br>
+    <br>
     
     <div class="container-fluid">
       
@@ -96,7 +105,7 @@
               <div class="col-lg-3 col-md-5">
                 <div class="detail-box">
                   <div class="heading_container">
-                    <button onclick="document.getElementById('hero_area').scrollIntoView();" id="myBtn" title="Go to Home">Home</button>
+                    <!-- <button onclick="document.getElementById('hero_area').scrollIntoView();" id="myBtn" title="Go to Home">Home</button> -->
                     <h2>
                       About Project
                     </h2>
@@ -117,6 +126,35 @@
   </section>
 
   </div>
+
+  
+  <!-- <div id="team"> -->
+    <section id="section3">
+      <br>
+      <br>
+      <h2>Section 3 - Team Members</h2>
+      <div class="team-members">
+          <div class="team-member">
+              <h3>John Doe</h3>
+              <p>Position: Developer</p>
+          </div>
+          <div class="team-member">
+              <h3>Jane Smith</h3>
+              <p>Position: Designer</p>
+          </div>
+          <div class="team-member">
+              <h3>Bob Johnson</h3>
+              <p>Position: Project Manager</p>
+          </div>
+          <div class="team-member">
+            <h3>ABCD</h3>
+            <p>Position: Tester</p>
+        </div>
+          <!-- Add more team members as needed -->
+      </div>
+    </section>
+
+  <!-- </div> -->
   <!-- end about section -->
 
   <!-- class section -->
