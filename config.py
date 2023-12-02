@@ -19,7 +19,7 @@ def parse_config(config_file="config.ini"):
 def load_model(weights_path):
     # Check if GPU is available
     if torch.cuda.is_available():
-        device = 'cuda'
+        device = 0
         print("Using GPU")
     else:
         device = 'cpu'
