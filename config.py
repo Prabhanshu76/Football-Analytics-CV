@@ -16,7 +16,15 @@ def parse_config(config_file="config.ini"):
     config.read(config_file)
     return config
 
-def load_model(weights_path, device=0):
+def load_model(weights_path):
+    # Check if GPU is available
+    if torch.cuda.is_available():
+        device = 'cuda'
+        print("Using GPU")
+    else:
+        device = 'cpu'
+        print("Using CPU")
+
     model = torch.hub.load('ultralytics/yolov5', 'custom', weights_path, device=device)
     return model
 

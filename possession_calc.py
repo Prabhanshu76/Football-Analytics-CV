@@ -1,8 +1,8 @@
 class PossessionCalculator:
     def __init__(self):
         self.current_possessing_team = None
-        self.team1_possession = 0
-        self.team2_possession = 0
+        self.team1_possession = 50
+        self.team2_possession = 50
 
     def update_possession(self, possession_team):
         if possession_team == self.current_possessing_team:
