@@ -1,5 +1,5 @@
 # Football-Analytics-CV
-Our project is dedicated to revolutionizing real-time soccer match analysis by leveraging cutting-edge technologies such as YOLOv5 and ByteTracker. Our primary focus lies in elevating soccer video analysis through precise player identification, accurate ball tracking, and the identification of crucial in-game events.
+Our project is dedicated to revolutionizing real-time soccer match analysis by leveraging cutting-edge technologies such as YOLOv5 and ByteTracker. We have successfully implemented a range of features that enhance soccer video analysis through precise player identification, accurate ball tracking, and the identification of crucial in-game events.
 
 ## YOLOv5 Integration
 With the integration of YOLOv5, we've achieved remarkable accuracy and speed in player and ball detection within live match footage. YOLOv5 has proven to be an invaluable asset, allowing us to reliably spot players and the soccer ball even in fast-paced game scenarios.
@@ -7,8 +7,28 @@ With the integration of YOLOv5, we've achieved remarkable accuracy and speed in 
 ## ByteTracker Tracking System
 In tandem with YOLOv5, we've incorporated ByteTracker, a sophisticated tracking system. ByteTracker's efficiency ensures seamless and continuous tracking of players and the ball across frames, providing a reliable way to monitor their movements throughout the game.
 
+## Implemented Features
+Our project boasts a comprehensive set of features, enhancing soccer match analysis:
+
+- **Player and Ball Detection:**
+  - Leveraging YOLOv5, our system accurately identifies and tracks players and the soccer ball in real-time.
+
+- **Player in Possession Detection:**
+  - The system intelligently identifies the player currently in possession of the ball during the match.
+
+- **Team Identification/Classification:**
+  - Our system classifies and identifies teams based on jersey colors, contributing to comprehensive team analysis.
+
+- **Team Possession Count:**
+  - We provide insights into team possession counts, helping teams understand and analyze their control over the ball during the game.
+
+- **Team Pass Count:**
+  - The system counts and analyzes the passes made by each team, offering a valuable metric for assessing teamwork and strategic plays.
+
 ## Project Goals
 Our overarching goal is to provide coaches and analysts with a tool that offers deep insights into team strategies and player performances. By enabling comprehensive soccer analytics, we aim to support smarter decision-making in coaching and enhance overall performance analysis. Our ultimate objective is to contribute to the advancement of soccer analysis methods, offering teams valuable insights to refine their strategies and tactics.
+
+---
 
 ## Project Setup
 To get started with our project, follow these steps:
@@ -26,7 +46,7 @@ To get started with our project, follow these steps:
 4. **Launch:**
    - Run `app.py` to start the application.
 
-Feel free to reach out if you have any questions or need further assistance. Happy analyzing!
+---
 
 #### Configuring Jersey Color Ranges
 
