@@ -107,17 +107,3 @@ def load_objects(config, boundaries):
 
 def get_player_in_possession_proximity(config):
     return int(config['PROXIMITY']['PLAYER_IN_POSSESSION_PROXIMITY'])
-
-
-# if __name__ == '__main__':
-#     config = parse_config()
-#     model = load_model(config['Paths']['WEIGHTS_PATH'])
-#     cap = load_video_capture(config['Paths']['SOURCE_VIDEO_PATH'])
-#     boundaries = load_boundaries(config)
-#     objects = load_objects(config, boundaries)
-
-#     # Now you can use the loaded objects in your main code
-#     jersey_classifier, base_annotator, player_goalkeeper_text_annotator, ball_marker_annotator, player_marker_annotator, byte_tracker, possession_calculator, pass_tracker = objects
-
-#     # Rest of your main code goes here
-#     # ...
