@@ -28,6 +28,8 @@ Our project boasts a comprehensive set of features, enhancing soccer match analy
 ## Project Goals
 Our overarching goal is to provide coaches and analysts with a tool that offers deep insights into team strategies and player performances. By enabling comprehensive soccer analytics, we aim to support smarter decision-making in coaching and enhance overall performance analysis. Our ultimate objective is to contribute to the advancement of soccer analysis methods, offering teams valuable insights to refine their strategies and tactics.
 
+## Demo Video
+[![Football Analytics Demo]([link_to_thumbnail_image](https://drive.google.com/file/d/1gbQy6c6K2Q7uZMs1uUytLeKsPthnDOle/view?usp=sharing))]([link_to_demo_video](https://drive.google.com/file/d/1rV_ib7MFLPu8kYvxj0eibML2f3NSCfm5/view?usp=drive_link))
 ---
 
 ## Project Setup
@@ -45,6 +47,8 @@ To get started with our project, follow these steps:
 
 4. **Launch:**
    - Run `app.py` to start the application.
+  
+After launching, open the following URL in your web browser: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ---
 
