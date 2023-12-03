@@ -28,10 +28,6 @@ Our project boasts a comprehensive set of features, enhancing soccer match analy
 ## Project Goals
 Our overarching goal is to provide coaches and analysts with a tool that offers deep insights into team strategies and player performances. By enabling comprehensive soccer analytics, we aim to support smarter decision-making in coaching and enhance overall performance analysis. Our ultimate objective is to contribute to the advancement of soccer analysis methods, offering teams valuable insights to refine their strategies and tactics.
 
-## Demo Video
-To help you get started with our project, we've created a demo video that walks you through the setup process and showcases the key features. Watch the video to see how you can integrate YOLOv5, set up ByteTracker, and utilize the various analytical features:
-
-[![Football Analytics Demo]([link_to_thumbnail_image](https://drive.google.com/file/d/1gbQy6c6K2Q7uZMs1uUytLeKsPthnDOle/view?usp=sharing))]([link_to_demo_video](https://drive.google.com/file/d/1rV_ib7MFLPu8kYvxj0eibML2f3NSCfm5/view?usp=drive_link))
 ---
 
 ## Project Setup
