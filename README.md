@@ -72,7 +72,7 @@ team2_v_max = ...
 ```
 ---
 ## References
-If you use or refer to any external tools, libraries, or resources in your project, please find the relevant references below:
+Please find the relevant references below:
 
 1. Roboflow. (2022). Track Football Players Using Computer Vision [Blog post and Jupyter Notebook]. Retrieved from [Roboflow Blog](https://blog.roboflow.com/track-football-players/) and [Roboflow GitHub](https://github.com/roboflow/notebooks/blob/main/notebooks/how-to-track-football-players.ipynb)
 2. Liu, Jia Tong, Xiaofeng Li, Wenlong Zhang, Yimin Wang, Hongqi. (2009). Automatic player detection, labeling and tracking in broadcast soccer video. Pattern Recognition Letters, 30, 103-113. DOI: [10.1016/j.patrec.2008.02.011](https://doi.org/10.1016/j.patrec.2008.02.011)
