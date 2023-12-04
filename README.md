@@ -69,3 +69,16 @@ team2_v_min = ...
 team2_h_max = ...
 team2_s_max = ...
 team2_v_max = ...
+
+
+## References
+If you use or refer to any external tools, libraries, or resources in your project, please find the relevant references below:
+
+1. Roboflow. (2022). Track Football Players Using Computer Vision [Blog post and Jupyter Notebook]. Retrieved from [Roboflow Blog](https://blog.roboflow.com/track-football-players/) and [Roboflow GitHub](https://github.com/roboflow/notebooks/blob/main/notebooks/how-to-track-football-players.ipynb)
+2. Liu, Jia Tong, Xiaofeng Li, Wenlong Zhang, Yimin Wang, Hongqi. (2009). Automatic player detection, labeling and tracking in broadcast soccer video. Pattern Recognition Letters, 30, 103-113. DOI: [10.1016/j.patrec.2008.02.011](https://doi.org/10.1016/j.patrec.2008.02.011)
+3. Ren, Jinchang Orwell, James Jones, Graeme Xu, Ming. (2009). Tracking the soccer ball using multiple fixed cameras. Computer Vision and Image Understanding, 113, 633-642. DOI: [10.1016/j.cviu.2008.01.007](https://doi.org/10.1016/j.cviu.2008.01.007)
+4. Mavrogiannis, P., Maglogiannis, I. (2022). Amateur football analytics using computer vision. Neural Comput Applic, 34, 19639–19654. DOI: [10.1007/s00521-022-07692-6](https://doi.org/10.1007/s00521-022-07692-6)
+5. Murat Durus. (n.d.). Ball Tracking and Action Recognition of Soccer Players in TV Broadcast Videos. Retrieved from [PDF](https://mediatum.ub.tum.de/doc/1145077/870316.pdf)
+6. Darapaneni, Narayana Kumar, Prashant Malhotra, Nikhil Sundaramurthy, Vigneswaran Thakur, Abhaya Chauhan, Shivam Thangeda, Krishna Paduri, Anwesh. (2022). Detecting key Soccer match events to create highlights using Computer Vision.
+7. Huang, Yu Llach, Joan Bhagavathy, Sitaram. (2007). Players and Ball Detection in Soccer Videos Based on Color Segmentation and Shape Analysis. 4577, 416-425. DOI: [10.1007/978-3-540-73417-8_50](https://doi.org/10.1007/978-3-540-73417-8_50)
+8. Banoth, Thulasya Hashmi, Mohammad Farukh. (2022). YOLOv3-SORT: detection and tracking player/ball in soccer sport. Journal of Electronic Imaging, 32. DOI: [10.1117/1.JEI.32.1.011003](https://doi.org/10.1117/1.JEI.32.1.011003)
