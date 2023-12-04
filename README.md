@@ -71,7 +71,7 @@ team2_s_max = ...
 team2_v_max = ...
 ```
 ---
-#### References
+## References
 If you use or refer to any external tools, libraries, or resources in your project, please find the relevant references below:
 
 1. Roboflow. (2022). Track Football Players Using Computer Vision [Blog post and Jupyter Notebook]. Retrieved from [Roboflow Blog](https://blog.roboflow.com/track-football-players/) and [Roboflow GitHub](https://github.com/roboflow/notebooks/blob/main/notebooks/how-to-track-football-players.ipynb)
